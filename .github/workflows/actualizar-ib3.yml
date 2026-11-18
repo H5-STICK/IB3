@@ -21,8 +21,13 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
+      - name: Instalar Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
       - name: Instalar yt-dlp
-        run: python -m pip install --upgrade yt-dlp
+        run: python -m pip install --upgrade "yt-dlp[default]"
 
       - name: Renovar enlaces de IB3
         shell: bash
