@@ -46,6 +46,7 @@ jobs:
                       "--no-config",
                       "--js-runtimes", "deno",
                       "--remote-components", "ejs:github",
+                      "--extractor-args", "youtube:player_client=android",
                       "-f", formato,
                       "-g", origen
                   ],
