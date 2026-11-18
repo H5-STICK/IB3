@@ -44,6 +44,8 @@ jobs:
                   [
                       "yt-dlp",
                       "--no-config",
+                      "--js-runtimes", "deno",
+                      "--remote-components", "ejs:github",
                       "-f", formato,
                       "-g", origen
                   ],
